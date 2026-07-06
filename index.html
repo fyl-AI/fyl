@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>天下之中，大美河南</title>
+  <link rel="stylesheet" href="css/style1.css" />
+  <style>
+	  
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .box{
+		background-image: url("img/33.jpg");
+	}
+	
+        
+    h1 {
+      text-align: center;
+	  margin-left: 150px;
+	  font-family: "STXingkai", "STKaiti", "KaiTi", sans-serif; 
+			font-family: "STXingkai", "STKaiti", "KaiTi", sans-serif; 
+            color: #2eb2e2;
+            
+	  
+    }
+	h2{
+		text-align: center;
+	}
+    
+    .spot-container {
+      display: flex;
+      justify-content: space-around;
+    }
+    .clock {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        font-size: 2em;
+    }
+	
+	button{
+		float: right;
+		font-size: 25px;
+	}
+	.spot-container .long{
+		margin: auto;
+		margin-right: -100px;
+	}
+	.long{
+		margin-top: 20px;
+		padding-left: 180px;
+		margin-right: -60px;
+		margin-left: 390px;
+		
+
+	}
+
+	.long h2{
+		margin-right: 50px;
+	}
+	.shao{
+		margin-top: 20px;
+		margin: auto;
+		padding-right: 100px;
+		margin-right: 270px;
+	}
+	.shao img{
+		width: 410px;
+	}
+	.yun{
+		margin: auto;
+		margin-top: -255px;
+		padding-left: 50px;
+	}
+	.lao{
+		margin: auto;
+		 margin-top: -255px;
+		margin-left: -200px;
+	}
+@keyframes zrn{
+				from{background-image: url("img/1.png");}
+				15%{background-image: url("img/2.png");}
+				30%{background-image: url("img/3.png");}
+				45%{background-image: url("img/4.png");}
+				60%{background-image: url("img/5.png");}
+				75%{background-image: url("img/6.png");}
+				90%{background-image: url("img/7.png");}
+				to{background-image: url("img/8.png");}
+			}
+			#f{
+				margin: auto;
+				margin-top: 20px;
+				width: 900px;
+				height: 800px;
+				animation-delay: 1s;
+				background-repeat: no-repeat;
+				background-size: 100%;
+				animation: zrn 10s infinite step-end;
+				 background-image: url("img/8.jpg");
+			
+				 
+			}
+			.login-container {
+			  display: none;
+			  position: fixed;
+			  top: 50%;
+			  left: 50%;
+			  transform: translate(-50%, -50%);
+			  background-color: #f1f1f1;
+			  padding: 20px;
+			  border-radius: 5px;
+			  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			 
+			}
+			.login-container input[type="text"],
+			.login-container input[type="password"] {
+			  margin-bottom: 10px;
+			  padding: 8px;
+			  border: 1px solid #ccc;
+			  border-radius: 3px;
+			}
+			.login-container input[type="submit"] {
+			  background-color: #4CAF50;
+			  color: #fff;
+			  padding: 10px 15px;
+			  border: none;
+			  border-radius: 3px;
+			  cursor: pointer;
+			}
+			.login-container input[type="submit"]:hover {
+			  background-color: #45a049;
+			}
+			.modal {
+			  display: none;
+			  position: fixed;
+			  z-index: 1;
+			  padding-top: 100px;
+			  left: 0;
+			  top: 0;
+			  width: 100%;
+			  height: 100%;
+			  overflow: auto;
+			  background-color: rgba(0, 0, 0, 0.4);
+			}
+			.modal-content {
+			  background-color: #fefefe;
+			  margin: auto;
+			  padding: 20px;
+			  border: 1px solid #888;
+			  width: 40%;
+			}
+  </style>
+</head>
+<body>
+
+ <div class="box">
+ <button onclick="openLogin()">登录</button>
+ <div id="login-container" class="login-container">
+   <span class="close-btn" onclick="closeLogin()">&times;</span>
+   <h2>登录</h2>
+   <input type="text" id="username" placeholder="用户名">
+   <input type="password" id="password" placeholder="密码">
+  
+   <input type="submit" value="登录" onclick="closeLogin()">
+ </div>
+ <script>
+   function openLogin() {
+     var loginContainer = document.getElementById("login-container");
+     loginContainer.style.display = "block";
+   }
+   
+   function closeLogin() {
+     var loginContainer = document.getElementById("login-container");
+     loginContainer.style.display = "none";
+    
+     document.getElementById("username").value = "";
+     document.getElementById("password").value = "";
+   }
+ </script>
+ <button onclick="openModal()">注册</button>
+ <div id="myModal" class="modal">
+   <div class="modal-content">
+     <span class="close-btn" onclick="closeModal()">&times;</span>
+     <h2>注册</h2>
+     <form id="registrationForm" onsubmit="event.preventDefault(); closeModal();">
+       <label for="username">用户名:</label>
+       <input type="text" id="username" name="username" required>
+       <label for="password">密码:</label>
+       <input type="password" id="password" name="password" required>
+       <label for="confirmPassword">确认密码:</label>
+       <input type="password" id="confirmPassword" name="confirmPassword" required>
+       <label for="email">邮箱:</label>
+       <input type="email" id="email" name="email" required>
+       <label for="phone">手机号:</label>
+       <input type="tel" id="phone" name="phone" required>
+       <input type="submit" value="注册">
+     </form>
+   </div>
+ </div>
+ <script>
+   function openModal() {
+     document.getElementById("myModal").style.display = "block";
+   }
+   function closeModal() {
+     document.getElementById("myModal").style.display = "none";
+    
+     document.getElementById("registrationForm").reset();
+   }
+   window.onclick = function(event) {
+     var myModal = document.getElementById("myModal");
+     if (event.target === myModal) {
+       closeModal();
+     }
+     var loginContainer = document.getElementById("login-container");
+     if (event.target === loginContainer) {
+       closeLogin();
+     }
+   }
+ </script> 
+ <h1>天下之中，大美河南</h1>
+  <div class="spot-container">
+    <div class="long">
+      <h2>龙门石窟</h2>
+       <a href="long.html"><img  width="380px" src="img/1.png" alt="龙门石窟"></a> 
+      <p>位于河南省洛阳市，是中国四大石<br />窟之一，被誉为中国雕刻艺术的瑰宝。</p >
+    </div>
+    
+    <div class="shao">
+      <h2>少林寺</h2>
+     <a href="shao.html"><img width="380px" height="240px" src="img/3.png" alt="少林寺"></a> 
+      <p>位于河南省郑州市，是中国佛教<br />祖庭之一，有着丰富的文化内涵。</p >
+    </div>
+  </div>
+ <div id="f"></div>
+  <div class="spot-container">
+    <div class="yun">
+      <h2>云台山</h2>
+    <a href="yun.html"> <img  width="400px" height="260px" src="img/2.png" alt="云台山"></a> 
+      <p>位于河南省焦作市，是中国著名的<br/>风景名胜区，被誉为华夏神奇地标。</p >
+    </div>
+    
+    <div class="lao">
+      <h2>老君山</h2>
+    <a href="lao.html"><img width="450px" height="250px" src="img/6.png" alt="老君山"></a>  
+      <p>位于河南省洛阳，是中国历史文化名城，“天<br />下第一仙山，世界第一仙山”。</p >
+    </div>
+  </div>
+  <footer id="footer">
+  		<p>© 2025 天下之中·大美河南. 设计灵感来源于河南5A景区.&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;版权归学生本人所有<br /></p >
+  		郑州工商学院
+  	</footer>
+</body>
+</html>

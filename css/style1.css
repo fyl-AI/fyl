@@ -1,0 +1,43 @@
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	
+}
+.box{
+	width: 1700px;
+	margin: 0 auto;
+	font-size: 25px;
+	margin-top: 40px;
+	/* background-color: aqua; */
+	/* background-image: url("img/9.png"); */
+}
+.spot-container img{
+transition: all 0.3s ease; 
+    overflow: hidden; 
+}
+
+.long a img:hover {
+    transform: scale(1.1) ;
+	}
+
+.shao a img:hover {
+    transform:  skew(20deg) ;
+	}
+.yun a img:hover {
+	transform: matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,10,5,0,1);
+	}
+.lao a img:hover{
+	transform: rotateY(35deg);
+}
+ #footer{
+					margin-top: 280px;
+					font-size: 37px;
+					border-top: 20px;
+					text-align: center;
+					 color: #0b5aa8;
+   			 font-family: "华文彩云", "STKaiti", serif; 
+    		letter-spacing: 1px;
+    		font-family: "华文行楷", "STKaiti", "微软雅黑", serif; 
+					
+			} 
