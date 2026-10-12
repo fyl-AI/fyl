@@ -1,0 +1,29 @@
+/* 全局样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "微软雅黑", Arial, sans-serif;
+  background: #f5f0eb;
+}
+
+/* 通用按钮样式 */
+button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* 图片通用效果 */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* 链接通用样式 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
